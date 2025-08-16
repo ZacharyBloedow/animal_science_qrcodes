@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Animal Info</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 40px;
+        background: #f7f7f7;
+      }
+      .card {
+        background: #fff;
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 600px;
+      }
+      .card img {
+        max-width: 100%;
+        border-radius: 8px;
+        margin-bottom: 15px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+      }
+      th,
+      td {
+        padding: 8px;
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+      }
+      th {
+        background: #f0f0f0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1 id="title"></h1>
+      <img id="image" alt="Animal Image" style="display: none" />
+      <p id="description"></p>
+      <h3>Details</h3>
+      <table id="attributes"></table>
+      <p><b>ID:</b> <span id="id"></span></p>
+    </div>
+
+    <script>
+      // Get ?id= from URL
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get("id");
+
+      fetch("data.json")
+        .then((res) => res.json())
+        .then((data) => {
+          const entry = data.find((item) => item.id === id);
+          if (entry) {
+            document.getElementById("title").textContent = entry.title;
+            document.getElementById("description").textContent =
+              entry.description;
+            document.getElementById("id").textContent = entry.id;
+
+            // Image
+            if (entry.image) {
+              const imgEl = document.getElementById("image");
+              imgEl.src = entry.image;
+              imgEl.style.display = "block";
+            }
+
+            // Attributes table
+            if (entry.attributes) {
+              const table = document.getElementById("attributes");
+              for (const [key, value] of Object.entries(entry.attributes)) {
+                const row = document.createElement("tr");
+                row.innerHTML = `<th>${key}</th><td>${value}</td>`;
+                table.appendChild(row);
+              }
+            }
+          } else {
+            document.body.innerHTML = "<h2>Page not found</h2>";
+          }
+        })
+        .catch(() => {
+          document.body.innerHTML = "<h2>Error loading data.json</h2>";
+        });
+    </script>
+  </body>
+</html>
