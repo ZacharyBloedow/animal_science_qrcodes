@@ -37,5 +37,18 @@
       "Diet": "Herbivore",
       "Status": "Vulnerable"
     }
+  },
+  {
+    "id": "20",
+    "title": "Boxer",
+    "description": "afhwuaibguiawbguiaegae",
+    "image": "images/panda.jpg",
+    "attributes": {
+      "Name": "Bao Bao",
+      "Species": "Ailuropoda melanoleuca",
+      "Habitat": "Bamboo forests",
+      "Diet": "Herbivore",
+      "Status": "Vulnerable"
+    }
   }
 ]
