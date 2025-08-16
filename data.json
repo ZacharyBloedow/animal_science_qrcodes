@@ -1,6 +1,5 @@
 [
   {
-    "id": "1",
     "title": "African Lion",
     "description": "The African lion is one of the most iconic big cats, known for its majestic mane and social pride structure.",
     "image": "images/lion.jpg",
@@ -13,7 +12,6 @@
     }
   },
   {
-    "id": "2",
     "title": "Bald Eagle",
     "description": "The bald eagle is a bird of prey found in North America and is the national bird of the United States.",
     "image": "images/eagle.jpg",
@@ -26,7 +24,6 @@
     }
   },
   {
-    "id": "3",
     "title": "Giant Panda",
     "description": "The giant panda is native to China and is easily recognized by its distinctive black-and-white fur.",
     "image": "images/panda.jpg",
