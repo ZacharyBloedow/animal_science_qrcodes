@@ -52,6 +52,19 @@
     }
   },
   {
+    "id": "5",
+    "title": "George",
+    "description": "George is a bunny",
+    "image": "images/george.jpg",
+    "attributes": {
+      "Name": "George",
+      "Species": "English Lop Rabbit",
+      "Habitat": "DMS Zoo",
+      "Diet": "Hay, Fresh Vegetables, Pellets",
+      "Status": "etc, etc, etc"
+    }
+  },
+  {
     "id": "20",
     "title": "Boxer",
     "description": "afhwuaibguiawbguiaegae",
