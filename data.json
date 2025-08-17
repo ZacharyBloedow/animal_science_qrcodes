@@ -39,6 +39,19 @@
     }
   },
   {
+    "id": "4",
+    "title": "Sadie",
+    "description": "Sadie loves ball",
+    "image": "images/sadie.jpg",
+    "attributes": {
+      "Name": "Sadie",
+      "Species": "Cocker Spaniel",
+      "Habitat": "The Couch",
+      "Diet": "Fatty",
+      "Status": "Lazy"
+    }
+  },
+  {
     "id": "20",
     "title": "Boxer",
     "description": "afhwuaibguiawbguiaegae",
